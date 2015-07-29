@@ -17,3 +17,6 @@ ArchLinuxの場合
 
 ##② シェルスクリプトの実行
 Please run for Enable_spidev.sh.  
+```lang
+    ./Enable_spidev.sh
+```
