@@ -1,7 +1,8 @@
 #!/usr/bin/env sh
 
-dtc -O dtb -o BB-SPI0DEV-00A0.dtbo -b 0 -@ BB-SPI0DEV-00A0.dts
-cp BB-SPI0DEV-00A0.dtbo /lib/firmware/
-echo BB-SPI0DEV > /sys/devices/bone_capemgr.9/slots
+wget https://raw.githubusercontent.com/adafruit/adafruit-beaglebone-io-python/master/overlays/ADAFRUIT-SPI0-00A0.dts
+dtc -O dtb -o ADAFRUIT-SPI0-00A0.dtbo -b 0 -@ ADAFRUIT-SPI0-00A0.dts
+cp ADAFRUIT-SPI0-00A0.dtbo /lib/firmware/
+echo ADAFRUIT-SPI0 > /sys/devices/bone_capemgr.9/slots
 
-rm BB-SPI0DEV-00A0.dtbo
+rm ADAFRUIT-SPI0-00A0.dts ADAFRUIT-SPI0-00A0.dtbo
